@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="浦城招聘-浦城本地人才招聘求职信息发布平台-浦城直聘网首页">
+    <meta name="description" content="浦城招聘网专注于浦城本地招聘求职服务，提供浦城最新工厂招聘、企业招聘、普工技工、行政文员、销售代理等岗位信息。浦城直聘网是浦城人找工作、企业招人才的权威招聘平台。">
+    <meta name="keywords" content="浦城招聘,浦城人才网,浦城找工作,浦城招聘网,浦城直聘,浦城普工招聘,浦城企业招聘">
+    <title>浦城招聘-浦城本地企业招聘与人才求职信息发布平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00a8e8;
+            --accent-color: #ff9f43;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-top {
+            background-color: #f4f6f9;
+            font-size: 12px;
+            color: var(--text-gray);
+            padding: 8px 0;
+        }
+
+        .header-top .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-main .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 400;
+            background: #eef4fc;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 600px;
+            margin: 0 40px;
+            display: flex;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px 0 0 6px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .search-bar button {
+            padding: 0 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .user-actions a {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .btn-login {
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 6px 20px;
+            border-radius: 20px;
+        }
+
+        .btn-post {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+        }
+
+        nav .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-list a {
+            color: rgba(255,255,255,0.9);
+            font-size: 15px;
+            padding: 12px 0;
+            display: block;
+            position: relative;
+        }
+
+        .nav-list a:hover, .nav-list a.active {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .nav-list a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            color: var(--white);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 60%;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero-desc {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+        }
+
+        .stat-item h4 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            width: 400px;
+            height: 300px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        /* Categories */
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 22px;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .view-all {
+            font-size: 14px;
+            color: var(--primary-color);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            border-color: var(--secondary-color);
+        }
+
+        .category-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Job List */
+        .job-list {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .job-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .job-card:hover {
+            background-color: #fafafa;
+        }
+
+        .job-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--text-gray);
+            flex-wrap: wrap;
+        }
+
+        .job-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .job-tags {
+            margin-top: 8px;
+        }
+
+        .tag {
+            background-color: #eef4fc;
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .job-action {
+            text-align: right;
+            min-width: 120px;
+        }
+
+        .salary {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hot-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 14px;
+        }
+
+        .hot-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hot-list a {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hot-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .hot-index {
+            color: #999;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+
+        .hot-list .hot-index.top-1 { color: #ff4757; font-weight: bold; }
+        .hot-list .hot-index.top-2 { color: #ff7f50; font-weight: bold; }
+        .hot-list .hot-index.top-3 { color: #ffa502; font-weight: bold; }
+
+        .recruit-card {
+            background: #f0f7ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .recruit-card h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .recruit-card p {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-bottom: 8px;
+        }
+
+        .recruit-card .btn-small {
+            display: inline-block;
+            font-size: 12px;
+            color: var(--white);
+            background-color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-info p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .job-list {
+                grid-template-columns: 1fr;
+            }
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .search-bar {
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-main .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .search-bar {
+                width: 100%;
+                margin: 0;
+            }
+            .nav-list {
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <span>欢迎来到浦城直聘网 - 浦城本地最专业的招聘求职平台</span>
+                <div class="header-links">
+                    <a href="#">设为首页</a> | <a href="#">加入收藏</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <a href="#" class="logo">
+                    浦城直聘 <span>PUCHENG</span>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="搜索职位、公司、关键词...">
+                    <button>搜索</button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="btn-login">登录</a>
+                    <a href="#" class="btn-post">免费发布职位</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">最新招聘</a></li>
+                    <li><a href="#">急聘专区</a></li>
+                    <li><a href="#">浦城工厂</a></li>
+                    <li><a href="#">普工技工</a></li>
+                    <li><a href="#">行政人事</a></li>
+                    <li><a href="#">销售代理</a></li>
+                    <li><a href="#">最新资讯</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">浦城人才招聘，连接企业与求职者</h1>
+                <p class="hero-desc">浦城直聘网提供海量浦城本地最新企业招聘信息、工厂招工信息及人才求职机会，助您轻松找到心仪工作。</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h4>120+</h4>
+                        <p>入驻企业</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>5000+</h4>
+                        <p>在招职位</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>8000+</h4>
+                        <p>求职简历</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg-img"></div>
+        </section>
+
+        <!-- Categories -->
+        <section>
+            <div class="section-title">
+                <h2>热门招聘分类</h2>
+                <a href="#" class="view-all">查看更多分类 &gt;</a>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <span class="category-icon">🏭</span>
+                    <div class="category-name">普工技工</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">💻</span>
+                    <div class="category-name">行政文员</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🤝</span>
+                    <div class="category-name">销售代理</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">👨‍🍳</span>
+                    <div class="category-name">餐饮服务</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🚗</span>
+                    <div class="category-name">司机物流</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">💻</span>
+                    <div class="category-name">技术工程师</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🏥</span>
+                    <div class="category-name">医疗护理</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🎓</span>
+                    <div class="category-name">教育培训</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="job-list">
+            <!-- Job Listings -->
+            <section>
+                <div class="section-title">
+                    <h2>最新发布</h2>
+                    <div style="font-size: 14px; color: #666;">
+                        <a href="#" style="color: #666; margin-right: 15px;">综合排序</a>
+                        <a href="#" style="color: #0056b3;">时间排序</a>
+                    </div>
+                </div>
+                
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>电商运营专员 (浦城分公司)</h3>
+                        <div class="job-meta">
+                            <span>📍 浦城县</span>
+                            <span>💼 经验不限</span>
+                            <span>🎓 学历不限</span>
+                        </div>
+                        <div class="job-tags">
+                            <span class="tag">双休</span>
+                            <span class="tag">社保</span>
+                            <span class="tag">年终奖</span>
+                        </div>
+                    </div>
+                    <div class="job-action">
+                        <span class="salary">4.5k - 6k</span>
+                        <a href="#" class="btn-outline">立即投递</a>
+                    </div>
+                </article>
+
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>食品厂操作工</h3>
+                        <div class="job-meta">
+                            <span>📍 浦城县</span>
+                            <span>💼 1-3年</span>
+                            <span>🎓 高中/中专</span>
+                        </div>
+                        <div class="job-tags">
+                            <span class="tag">包吃住</span>
+                            <span class="tag">长白班</span>
+                            <span class="tag">节日福利</span>
+                        </div>
+                    </div>
+                    <div class="job-action">
+                        <span class="salary">3.5k - 4.5k</span>
+                        <a href="#" class="btn-outline">立即投递</a>
+                    </div>
+                </article>
+
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>区域销售经理</h3>
+                        <div class="job-meta">
+                            <span>📍 南平市</span>
+                            <span>💼 3-5年</span>
+                            <span>🎓 大专</span>
+                        </div>
+                        <div class="job-tags">
+                            <span class="tag">高提成</span>
+                            <span class="tag">旅游</span>
+                            <span class="tag">车补</span>
+                        </div>
+                    </div>
+                    <div class="job-action">
+                        <span class="salary">6k - 10k</span>
+                        <a href="#" class="btn-outline">立即投递</a>
+                    </div>
+                </article>
+
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>财务主管</h3>
+                        <div class="job-meta">
+                            <span>📍 浦城县</span>
+                            <span>💼 5-10年</span>
+                            <span>🎓 会计/财务</span>
+                        </div>
+                        <div class="job-tags">
+                            <span class="tag">五险一金</span>
+                            <span class="tag">稳定</span>
+                            <span class="tag">年终奖</span>
+                        </div>
+                    </div>
+                    <div class="job-action">
+                        <span class="salary">6k - 8k</span>
+                        <a href="#" class="btn-outline">立即投递</a>
+                    </div>
+                </article>
+
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>模具设计师</h3>
+                        <div class="job-meta">
+                            <span>📍 浦城县</span>
+                            <span>💼 3-5年</span>
+                            <span>🎓 大专</span>
+                        </div>
+                        <div class="job-tags">
+                            <span class="tag">技术入股</span>
+                            <span class="tag">加班费</span>
+                        </div>
+                    </div>
+                    <div class="job-action">
+                        <span class="salary">8k - 12k</span>
+                        <a href="#" class="btn-outline">立即投递</a>
+                    </div>
+                </article>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="#" class="btn-outline" style="display: inline-block;">加载更多职位</a>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <!-- Hot Recruit -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">🔥 浦城热门招聘</h3>
+                    <ul class="hot-list">
+                        <li><a href="#"><span class="hot-index top-1">1</span>浦城某电子厂招聘普工</a></li>
+                        <li><a href="#"><span class="hot-index top-2">2</span>大型超市招聘导购员</a></li>
+                        <li><a href="#"><span class="hot-index top-3">3</span>新能源公司招聘操作工</a></li>
+                        <li><a href="#"><span class="hot-index">4</span>私立幼儿园招聘教师</a></li>
+                        <li><a href="#"><span class="hot-index">5</span>物流公司招聘搬运工</a></li>
+                        <li><a href="#"><span class="hot-index">6</span>酒店招聘前台接待</a></li>
+                        <li><a href="#"><span class="hot-index">7</span>家政公司招聘保姆</a></li>
+                        <li><a href="#"><span class="hot-index">8</span>快递网点招聘分拣员</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Recruit -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">🏢 企业急聘</h3>
+                    <div class="recruit-card">
+                        <h4>浦城建材市场</h4>
+                        <p>招聘业务员若干名，底薪3000+提成</p>
+                        <a href="#" class="btn-small">查看详情</a>
+                    </div>
+                    <div class="recruit-card">
+                        <h4>富顺餐饮集团</h4>
+                        <p>招聘后厨帮工、洗碗工</p>
+                        <a href="#" class="btn-small">查看详情</a>
+                    </div>
+                    <div class="recruit-card">
+                        <h4>众安汽修厂</h4>
+                        <p>招聘学徒工，包吃住</p>
+                        <a href="#" class="btn-small">查看详情</a>
+                    </div>
+                </div>
+
+                <!-- Ad Banner Placeholder -->
+                <div style="background-color: #eee; height: 250px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">
+                    [企业推广位]
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>浦城直聘网是浦城本地领先的专业招聘服务平台，致力于为浦城企业提供高效的人才招聘解决方案。</p>
+                    <p>关注我们，获取浦城最新招聘资讯。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>招聘服务</h4>
+                    <ul>
+                        <li><a href="#">企业注册</a></li>
+                        <li><a href="#">发布职位</a></li>
+                        <li><a href="#">人才简历库</a></li>
+                        <li><a href="#">招聘套餐</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>求职帮助</h4>
+                    <ul>
+                        <li><a href="#">如何找好工作</a></li>
+                        <li><a href="#">简历制作指南</a></li>
+                        <li><a href="#">面试技巧</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：0599-1234567</li>
+                        <li>邮箱：service@puchengzp.com</li>
+                        <li>地址：福建省南平市浦城县</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2023 浦城直聘网 All Rights Reserved. 闽ICP备12345678号</p>
+                <p>本站内容均来自互联网，仅供学习交流使用，不代表本站立场。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>

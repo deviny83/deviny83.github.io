@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2013四川高考数学试卷-真题解析与备考资料</title>
+    <meta name="description" content="本站提供2013年四川高考数学试卷的完整真题、答案解析及评分标准。包含试卷结构分析、考点分布及考生回忆版内容，助力考生复习备考。">
+    <meta name="keywords" content="2013四川高考数学试卷,四川高考数学真题,2013高考数学答案,高考数学解析">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 2rem var(--spacing-unit);
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Paper Structure */
+        .paper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .paper-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: var(--accent-color);
+        }
+
+        .paper-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .paper-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #1a252f;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Analysis Table */
+        .analysis-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .analysis-table th, .analysis-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .analysis-table th {
+            background-color: #f1f3f5;
+            font-weight: 600;
+        }
+
+        .analysis-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .feature-content h4 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .feature-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span>🎓</span> 高考真题库
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">全国卷</a></li>
+                    <li><a href="#">四川卷</a></li>
+                    <li><a href="#">备考资料</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>2013年四川高考数学试卷</h1>
+            <p>完整收录2013年普通高等学校招生全国统一考试（四川卷）数学试题与官方答案解析，帮助考生精准把握考点，查漏补缺。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 试卷结构概览 -->
+        <section>
+            <h2 class="section-title">试卷结构概览</h2>
+            <div class="paper-grid">
+                <div class="paper-card">
+                    <h3>试题类型</h3>
+                    <p>选择题、填空题、解答题</p>
+                    <a href="#" class="btn btn-outline">查看详情</a>
+                </div>
+                <div class="paper-card">
+                    <h3>考试时间</h3>
+                    <p>120分钟</p>
+                    <a href="#" class="btn btn-outline">查看详情</a>
+                </div>
+                <div class="paper-card">
+                    <h3>满分分值</h3>
+                    <p>150分</p>
+                    <a href="#" class="btn btn-outline">查看详情</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 考点分析 -->
+        <section>
+            <h2 class="section-title">核心考点分析</h2>
+            <p style="margin-bottom: 20px; color: var(--text-secondary);">2013年四川高考数学试卷注重基础知识的考查，同时兼顾对数学思维能力的考察。以下是根据试题整理的考点分布：</p>
+            <table class="analysis-table">
+                <thead>
+                    <tr>
+                        <th>模块</th>
+                        <th>主要考查内容</th>
+                        <th>难度分布</th>
+                        <th>备考建议</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>集合与逻辑</td>
+                        <td>集合的运算、充分必要条件</td>
+                        <td>基础</td>
+                        <td>重视概念理解，注意易错点</td>
+                    </tr>
+                    <tr>
+                        <td>函数与导数</td>
+                        <td>函数单调性、导数应用、极值</td>
+                        <td>中档/难点</td>
+                        <td>加强导数综合题的练习</td>
+                    </tr>
+                    <tr>
+                        <td>三角函数</td>
+                        <td>三角恒等变换、解三角形</td>
+                        <td>基础/中档</td>
+                        <td>熟练掌握公式，注意角的范围</td>
+                    </tr>
+                    <tr>
+                        <td>立体几何</td>
+                        <td>空间向量、线面关系</td>
+                        <td>中档</td>
+                        <td>建立空间直角坐标系是关键</td>
+                    </tr>
+                    <tr>
+                        <td>解析几何</td>
+                        <td>直线与圆、圆锥曲线</td>
+                        <td>难点</td>
+                        <td>计算量大，需耐心与技巧</td>
+                    </tr>
+                    <tr>
+                        <td>概率与统计</td>
+                        <td>概率计算、离散型随机变量</td>
+                        <td>基础</td>
+                        <td>审题清晰，规范作答</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 真题下载与获取 -->
+        <section>
+            <h2 class="section-title">试卷获取方式</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📄</div>
+                    <div class="feature-content">
+                        <h4>高清PDF下载</h4>
+                        <p>提供官方扫描版PDF文档，清晰还原试卷排版，方便打印复习。</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✅</div>
+                    <div class="feature-content">
+                        <h4>标准答案解析</h4>
+                        <p>包含参考答案及详细的解题步骤，帮助考生理解命题思路。</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-content">
+                        <h4>考生回忆版</h4>
+                        <p>收录当年考生回忆的试卷内容，作为官方资料的补充参考。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section>
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="faq-item active">
+                <div class="faq-question">2013年四川高考数学卷难吗？</div>
+                <div class="faq-answer">
+                    根据当年的考生反馈，2013年四川卷整体难度适中，但解析几何和导数部分对计算能力要求较高，属于常规的压轴题难度。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">在哪里可以找到官方的评分标准？</div>
+                <div class="faq-answer">
+                    官方评分标准通常在考试结束后由省教育考试院公布。本站提供的是参考答案及评分细则，供考生自测使用。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">这套试卷适合现在的考生复习吗？</div>
+                <div class="faq-answer">
+                    虽然高考大纲和题型会有调整，但数学基础知识和核心考点具有延续性。通过研究历年真题，特别是像2013年这样的经典试卷，依然能帮助考生把握命题趋势。
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2023-2024 高考真题库. 保留所有权利。</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">隐私政策</a>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 20px; color: #7f8c8d;">
+                本站内容仅供学习交流使用，部分资料来源于网络，如有版权问题请联系删除。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

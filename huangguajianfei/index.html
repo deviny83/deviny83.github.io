@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="黄瓜减肥指南：提供科学的黄瓜减肥食谱、热量计算、食用禁忌及搭配建议。了解如何通过黄瓜代餐、黄瓜沙拉等健康饮食方式实现高效减脂。">
+    <meta name="keywords" content="黄瓜减肥,黄瓜减肥食谱,代餐黄瓜,黄瓜减肥法,低卡饮食">
+    <title>黄瓜减肥-健康饮食与科学减脂指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-green: #4CAF50;
+            --dark-green: #2E7D32;
+            --light-green: #E8F5E9;
+            --accent-yellow: #FFEB3B;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #F9FBF9;
+            --white: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-green);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-1px);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, #81C784 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* 核心概念区 */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .concept-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .concept-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .concept-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-green);
+        }
+
+        .concept-card p {
+            color: var(--text-light);
+        }
+
+        /* 食谱推荐 */
+        .recipes-section {
+            background-color: var(--light-green);
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .recipe-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .recipe-img-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+        
+        .recipe-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 25px;
+        }
+
+        .recipe-tag {
+            display: inline-block;
+            background-color: var(--light-green);
+            color: var(--dark-green);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .recipe-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .recipe-info {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .recipe-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .recipe-link {
+            color: var(--primary-green);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* 饮食指南/注意事项 */
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .guide-list {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .guide-list h3 {
+            margin-bottom: 30px;
+            color: var(--dark-green);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+
+        .guide-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .guide-num {
+            background-color: var(--primary-green);
+            color: var(--white);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .guide-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .guide-text p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .warning-box {
+            background-color: #FFF3E0;
+            border-left: 5px solid #FF9800;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h4 {
+            color: #E65100;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .warning-box p {
+            font-size: 0.95rem;
+            color: #5D4037;
+        }
+
+        /* 常见问题 FAQ */
+        .faq-section {
+            background-color: var(--white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-main);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            margin-top: 15px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2E7D32;
+            color: #E8F5E9;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #C8E6C9;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #81C784;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                    <path d="M12 6v6l4 2"></path>
+                </svg>
+                <span>黄瓜减肥指南</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#benefits" class="active">核心优势</a></li>
+                    <li><a href="#recipes">推荐食谱</a></li>
+                    <li><a href="#guide">食用指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#recipes" class="cta-btn">开始减脂</a>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>清爽黄瓜，高效燃脂</h1>
+            <p>黄瓜水分含量高达96%，热量极低，是夏季和减脂期最佳的低卡食材。通过科学的黄瓜饮食法，轻松控制热量摄入，享受健康轻盈的生活。</p>
+            <a href="#recipes" class="cta-btn" style="background-color: var(--white); color: var(--primary-green);">查看食谱</a>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>16</h3>
+                    <p>大卡/100g (几乎无热量)</p>
+                </div>
+                <div class="stat-item">
+                    <h3>96%</h3>
+                    <p>水分含量</p>
+                </div>
+                <div class="stat-item">
+                    <h3>0</h3>
+                    <p>脂肪与胆固醇</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="benefits" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么选择黄瓜减肥？</h2>
+                <p>不仅仅是低卡，黄瓜更是一种全方位的健康食材</p>
+            </div>
+            <div class="concept-grid">
+                <article class="concept-card">
+                    <div class="concept-icon">💧</div>
+                    <h3>极低热量</h3>
+                    <p>黄瓜是蔬菜中热量最低的之一，每100克仅含约16大卡。吃黄瓜几乎等于在喝水，能有效制造热量缺口。</p>
+                </article>
+                <article class="concept-card">
+                    <div class="concept-icon">🔥</div>
+                    <h3>促进代谢</h3>
+                    <p>黄瓜中的丙醇二酸能抑制体内糖类转化为脂肪，同时丰富的膳食纤维能促进肠道蠕动，加速代谢废物排出。</p>
+                </article>
+                <article class="concept-card">
+                    <div class="concept-icon">🥗</div>
+                    <h3>高饱腹感</h3>
+                    <p>虽然热量低，但黄瓜体积大、水分足。食用后能显著增加胃部饱腹感，减少对高热量零食的渴望。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 推荐食谱 -->
+    <section id="recipes" class="section recipes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>经典黄瓜减肥食谱</h2>
+                <p>告别单调，多样化搭配让减脂不再枯燥</p>
+            </div>
+            <div class="recipe-grid">
+                <!-- 食谱 1 -->
+                <article class="recipe-card">
+                    <div class="recipe-img-placeholder">
+                        <img src="https://picsum.photos/seed/cucumber1/400/300" alt="黄瓜鸡蛋三明治">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-tag">早餐代餐</span>
+                        <h3>黄瓜鸡蛋三明治</h3>
+                        <div class="recipe-info">
+                            <span>⏱️ 5分钟</span>
+                            <span>🔥 180大卡</span>
+                        </div>
+                        <p class="recipe-desc">全麦面包夹入煎蛋和切片黄瓜，低脂高蛋白，开启活力一天。</p>
+                        <a href="#" class="recipe-link">查看做法 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- 食谱 2 -->
+                <article class="recipe-card">
+                    <div class="recipe-img-placeholder">
+                        <img src="https://picsum.photos/seed/cucumber2/400/300" alt="清爽黄瓜沙拉">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-tag">午餐/晚餐</span>
+                        <h3>金枪鱼黄瓜沙拉</h3>
+                        <div class="recipe-info">
+                            <span>⏱️ 10分钟</span>
+                            <span>🔥 250大卡</span>
+                        </div>
+                        <p class="recipe-desc">搭配水浸金枪鱼和低脂油醋汁，富含Omega-3，健康又美味。</p>
+                        <a href="#" class="recipe-link">查看做法 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- 食谱 3 -->
+                <article class="recipe-card">
+                    <div class="recipe-img-placeholder">
+                        <img src="https://picsum.photos/seed/cucumber3/400/300" alt="黄瓜汁">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-tag">饮品</span>
+                        <h3>黄瓜苹果排毒汁</h3>
+                        <div class="recipe-info">
+                            <span>⏱️ 5分钟</span>
+                            <span>🔥 80大卡</span>
+                        </div>
+                        <p class="recipe-desc">将黄瓜与苹果、柠檬混合榨汁，补充维生素，排毒养颜。</p>
+                        <a href="#" class="recipe-link">查看做法 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 食用指南 -->
+    <section id="guide" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>科学食用指南</h2>
+                <p>正确吃黄瓜才能发挥最大功效</p>
+            </div>
+            <div class="guide-container">
+                <div class="guide-list">
+                    <h3>✅ 推荐食用方式</h3>
+                    <div class="guide-item">
+                        <div class="guide-num">1</div>
+                        <div class="guide-text">
+                            <h4>生吃或凉拌</h4>
+                            <p>尽量保留黄瓜皮，因为皮中含有丰富的纤维素和矿物质。凉拌时少油少糖，突出原味。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-num">2</div>
+                        <div class="guide-text">
+                            <h4>餐前先吃半根</h4>
+                            <p>饭前30分钟吃半根黄瓜，利用体积优势增加饱腹感，减少正餐的摄入量。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-num">3</div>
+                        <div class="guide-text">
+                            <h4>代替高热量零食</h4>
+                            <p>下午饿了想吃薯片或奶茶时，用黄瓜条蘸少许低脂酱料（如低脂酸奶）代替。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ 注意事项</h4>
+                    <p><strong>不要只吃黄瓜：</strong>虽然黄瓜热量低，但缺乏蛋白质和优质脂肪。长期单一饮食会导致肌肉流失和新陈代谢下降。建议作为代餐辅助，配合均衡饮食。</p>
+                    <br>
+                    <p><strong>脾胃虚寒者慎食：</strong>黄瓜性凉，生吃过多容易引起腹泻或胃痛。建议烹饪加热后再食用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">每天吃多少黄瓜合适？</div>
+                    <div class="faq-answer">
+                        <p>建议每天食用200-300克（约1-2根中等大小黄瓜）。过量食用可能会引起腹胀或肠胃不适。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">黄瓜能代替主食吗？</div>
+                    <div class="faq-answer">
+                        <p>黄瓜不能完全代替主食。它缺乏碳水化合物提供的能量。建议将黄瓜作为加餐或配菜，主食仍需保证摄入。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">黄瓜减肥法一周能瘦几斤？</div>
+                    <div class="faq-answer">
+                        <p>黄瓜减肥法本身热量极低，短期使用可能快速掉秤（多为水分）。但长期效果取决于整体热量缺口和运动量。科学减脂通常建议每周减重0.5-1公斤。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">晚上吃黄瓜会胖吗？</div>
+                    <div class="faq-answer">
+                        <p>只要总热量不超标，晚上吃黄瓜也不会胖。相反，晚餐吃黄瓜有助于控制热量摄入。但需注意烹饪方式，避免油炸或高糖酱料。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>黄瓜减肥指南</h4>
+                    <p style="color: #C8E6C9; font-size: 0.9rem; line-height: 1.8;">
+                        专注于提供科学、健康的黄瓜减肥知识与食谱分享，帮助您通过饮食调整实现理想体重。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#benefits">核心优势</a></li>
+                        <li><a href="#recipes">热门食谱</a></li>
+                        <li><a href="#guide">食用指南</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>温馨提示</h4>
+                    <ul>
+                        <li><a href="#">健康饮食原则</a></li>
+                        <li><a href="#">运动搭配建议</a></li>
+                        <li><a href="#">减脂误区解析</a></li>
+                        <li><a href="#">联系我们的团队</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 黄瓜减肥指南. All Rights Reserved. 本站内容仅供健康参考，不构成医疗建议。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', function() {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项状态
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                          </html>

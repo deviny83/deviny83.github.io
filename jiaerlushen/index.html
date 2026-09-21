@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="加尔鲁什·地狱咆哮资料站 - 提供魔兽世界剧情背景、角色经历、奥格瑞玛执政时期分析及萨尔与沃金的关系深度解读。">
+    <meta name="keywords" content="加尔鲁什·地狱咆哮,魔兽世界,奥格瑞玛,部落,萨尔,沃金,剧情">
+    <title>加尔鲁什·地狱咆哮 - 魔兽世界角色档案与剧情深度解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 暗红 */
+            --secondary-color: #C62828; /* 亮红 */
+            --dark-bg: #1a1a1a;
+            --card-bg: #2c2c2c;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-gold: #FFD700;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/orgrimmar/1600/600') no-repeat center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+            color: var(--accent-gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        /* 主要内容区 */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* 文章列表 */
+        .section-title {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .article-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 3px solid transparent;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-2px);
+            border-left-color: var(--accent-gold);
+        }
+
+        .article-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .article-card .meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .article-card p {
+            color: #ccc;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .article-card .read-more {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* 侧边栏 */
+        aside .widget {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+        }
+
+        .widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #3a3a3a;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* 时间轴/经历 */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+            border-left: 2px solid #444;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        /* 剧情分析表格 */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #333;
+            color: var(--accent-gold);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #111;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">Warcraft Archive</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">角色档案</a></li>
+                    <li><a href="#">剧情解析</a></li>
+                    <li><a href="#">部落历史</a></li>
+                    <li><a href="#">影视资料</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>加尔鲁什·地狱咆哮</h1>
+            <p>部落之魂，兽人英雄，还是毁灭的暴君？深入解析这位改变了艾泽拉斯命运的格罗玛什之子。</p>
+            <a href="#character-intro" class="btn">开始阅读</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-grid">
+            <!-- 左侧：主要文章内容 -->
+            <section id="character-intro">
+                <h2 class="section-title">角色档案与生平</h2>
+                
+                <article class="article-card">
+                    <h3>格罗玛什之血与成长</h3>
+                    <span class="meta">发布于 2023-10-15 | 分类：背景故事</span>
+                    <p>加尔鲁什·地狱咆哮是格罗玛什·地狱咆哮的儿子。幼年时期，他目睹了父亲为了战胜兽人古尔丹而饮下恶魔之血，这一事件成为了他一生的心理烙印。萨尔被解放后收养了加尔鲁什，试图将他培养成一名文明的领袖，但兽人内心深处的嗜血本能从未完全熄灭。</p>
+                    <a href="#" class="read-more">阅读全文 &rarr;</a>
+                </article>
+
+                <article class="article-card">
+                    <h3>萨尔执政时期与继承危机</h3>
+                    <span class="meta">发布于 2023-10-18 | 分类：剧情解析</span>
+                    <p>在萨尔执政期间，加尔鲁什虽然身居高位，但始终对萨尔推行的“文明化”政策持保留态度。他渴望证明自己比父亲更强，同时也认为萨尔过于软弱。这种矛盾在萨尔决定将大酋长之位传给沃金时达到了顶峰，最终导致了加尔鲁什发动政变，废黜萨尔并成为新的部落大酋长。</p>
+                    <a href="#" class="read-more">阅读全文 &rarr;</a>
+                </article>
+
+                <article class="article-card">
+                    <h3>大地的守护者与末日咆哮</h3>
+                    <span class="meta">发布于 2023-10-22 | 分类：大灾变</span>
+                    <p>加尔鲁什被上古之神尤格-萨隆蛊惑，佩戴了邪能护手。为了拯救艾泽拉斯免受亡灵天灾的侵袭，他开始推行极端的“大地的守护者”计划，包括利用萨格拉斯之墓的力量净化被污染的土地。这一行为引发了德莱尼人和暗夜精灵的强烈反抗，最终导致了加尔鲁什被沃金和联盟联军俘虏。</p>
+                    <a href="#" class="read-more">阅读全文 &rarr;</a>
+                </article>
+
+                <article class="article-card">
+                    <h3>审判与救赎的争议</h3>
+                    <span class="meta">发布于 2023-10-25 | 分类：剧情解析</span>
+                    <p>在诺森德的战败后，加尔鲁什被带回艾泽拉斯接受审判。尽管他犯下了滔天罪行，但他对部落的忠诚和对父亲遗产的扭曲继承，使得他的审判成为了一个复杂的话题。他最终被自己的儿子瓦里安·乌瑞恩国王处决，这一事件也标志着萨尔系部落的终结和新的部落时代的开始。</p>
+                    <a href="#" class="read-more">阅读全文 &rarr;</a>
+                </article>
+            </section>
+
+            <!-- 右侧：侧边栏 -->
+            <aside>
+                <div class="widget">
+                    <h3>关键词标签</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">部落大酋长</a>
+                        <a href="#" class="tag">地狱咆哮</a>
+                        <a href="#" class="tag">萨尔</a>
+                        <a href="#" class="tag">沃金</a>
+                        <a href="#" class="tag">邪能护手</a>
+                        <a href="#" class="tag">大地的守护者</a>
+                        <a href="#" class="tag">萨格拉斯之墓</a>
+                        <a href="#" class="tag">瓦里安</a>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <h3>主要经历时间轴</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">大灾变前</div>
+                            <div>在萨尔麾下服役，性格桀骜不驯。</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">大灾变 - 12.0</div>
+                            <div>成为部落大酋长，实施“大地的守护者”计划。</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">12.1 - 12.2</div>
+                            <div>入侵诺森德，战败被俘。</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">12.3</div>
+                            <div>在杜隆塔尔接受审判并被处决。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <h3>相关人物关系</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>关系</th>
+                                <th>描述</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>父亲</td>
+                                <td>格罗玛什·地狱咆哮（传奇英雄）</td>
+                            </tr>
+                            <tr>
+                                <td>养父</td>
+                                <td>萨尔（部落领袖）</td>
+                            </tr>
+                            <tr>
+                                <td>对手</td>
+                                <td>沃金（暗矛领袖）</td>
+                            </tr>
+                            <tr>
+                                <td>对手</td>
+                                <td>瓦里安·乌瑞恩（联盟国王）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 底部更多内容 -->
+        <section>
+            <h2 class="section-title">深度剧情分析</h2>
+            <div class="article-card">
+                <h3>加尔鲁什：悲剧英雄还是战争罪犯？</h3>
+                <p>加尔鲁什·地狱咆哮是一个充满争议的角色。支持者认为他是为了部落的安全不惜一切代价的“护盾”，他的极端手段在某种程度上确实净化了被亡灵天灾污染的土地；反对者则指责他为了达成目的不择手段，甚至牺牲无辜者的生命，最终导致了部落的分裂和联盟的全面战争。他的悲剧在于，他试图用父亲当年的“野蛮”方式来解决问题，却忽略了文明与道德的底线。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 魔兽世界资料站. All Rights Reserved.</p>
+            <p>本站内容仅供粉丝交流与学习使用，所有游戏版权归暴雪娱乐所有。</p>
+        </div>
+    </footer>
+
+</body>
+</html>

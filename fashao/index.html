@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发烧 - 家庭体温监测、症状自查与科学护理指南</title>
+    <meta name="description" content="发烧 - 提供关于发热症状的全面解读，包括体温标准、退烧方法、用药建议及何时就医的指导。帮助您科学应对发热，守护家人健康。">
+    <meta name="keywords" content="发烧, 发热, 体温监测, 退烧药, 家庭护理, 医疗健康">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --primary-hover: #c0392b;
+            --secondary-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-light: #7f8c8d;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f0 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .quick-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .action-card {
+            background: var(--card-bg);
+            padding: 20px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid #eee;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .action-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Symptom Guide */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2rem;
+            color: var(--text-main);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .info-card ul {
+            padding-left: 20px;
+        }
+
+        .info-card li {
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        /* Temperature Scale */
+        .temp-section {
+            background-color: var(--card-bg);
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+
+        .temp-table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .fever-high {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Treatment Steps */
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Warning Banner */
+        .warning-banner {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 40px 0;
+            border-left: 5px solid #ffeeba;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+            .step-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>🌡️</span> 发烧指南
+            </div>
+            <nav class="nav-links">
+                <a href="#symptoms">症状识别</a>
+                <a href="#standards">体温标准</a>
+                <a href="#treatment">家庭护理</a>
+                <a href="#when-to-see">何时就医</a>
+            </nav>
+            <a href="#treatment" class="cta-btn">立即查看护理建议</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>科学认识与应对发烧</h1>
+                <p>发烧是身体对抗感染的重要防御机制。了解体温标准，掌握正确的家庭护理方法，帮助您和家人安全度过不适期。</p>
+                <div class="quick-actions">
+                    <div class="action-card" onclick="checkTemperature()">
+                        <span class="action-icon">🌡️</span>
+                        <h3>快速自查体温</h3>
+                        <p style="font-size: 0.9rem; color: #666;">点击查看成人/儿童体温参考范围</p>
+                    </div>
+                    <div class="action-card" onclick="showMedicationTips()">
+                        <span class="action-icon">💊</span>
+                        <h3>用药指导</h3>
+                        <p style="font-size: 0.9rem; color: #666;">常见退烧药的使用注意事项</p>
+                    </div>
+                    <div class="action-card" onclick="showCareTips()">
+                        <span class="action-icon">🛌</span>
+                        <h3>居家护理</h3>
+                        <p style="font-size: 0.9rem; color: #666;">补水、休息与物理降温技巧</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Symptom Recognition -->
+        <section id="symptoms" class="container">
+            <h2 class="section-title">发烧伴随症状识别</h2>
+            <div class="grid-3">
+                <article class="info-card">
+                    <h3>🤒 轻度症状</h3>
+                    <p style="margin-bottom: 10px; color: #666;">体温在38.5℃以下，通常表现为：</p>
+                    <ul>
+                        <li>轻微畏寒、手脚冰凉</li>
+                        <li>出汗后体温逐渐下降</li>
+                        <li>精神状态尚可，能正常交流</li>
+                        <li>食欲略有下降，但能进食</li>
+                    </ul>
+                </article>
+                <article class="info-card">
+                    <h3>🔥 中度症状</h3>
+                    <p style="margin-bottom: 10px; color: #666;">体温在38.5℃-39℃之间，需注意：</p>
+                    <ul>
+                        <li>明显畏寒、寒战、全身酸痛</li>
+                        <li>心率加快，呼吸略急促</li>
+                        <li>可能出现头痛、头晕</li>
+                        <li>需要开始考虑药物干预</li>
+                    </ul>
+                </article>
+                <article class="info-card">
+                    <h3>⚠️ 高度警示</h3>
+                    <p style="margin-bottom: 10px; color: #666;">体温超过39℃，可能伴随：</p>
+                    <ul>
+                        <li>剧烈头痛、颈部僵硬</li>
+                        <li>意识模糊、谵妄或抽搐</li>
+                        <li>呼吸困难、胸痛</li>
+                        <li>皮疹或持续呕吐</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Temperature Standards -->
+        <section id="standards" class="temp-section">
+            <div class="container">
+                <h2 class="section-title">体温标准参考</h2>
+                <p style="text-align: center; margin-bottom: 20px; color: #666;">不同部位测量体温的正常范围与发热界定略有差异，以下为临床常用标准。</p>
+                <div class="temp-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>测量部位</th>
+                                <th>正常范围</th>
+                                <th>低烧</th>
+                                <th>中度发烧</th>
+                                <th>高烧</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>腋下</strong></td>
+                                <td>36.0℃ - 37.0℃</td>
+                                <td>37.1℃ - 37.9℃</td>
+                                <td>38.0℃ - 38.9℃</td>
+                                <td>≥ 39.0℃</td>
+                            </tr>
+                            <tr>
+                                <td><strong>口腔</strong></td>
+                                <td>36.3℃ - 37.2℃</td>
+                                <td>37.3℃ - 37.9℃</td>
+                                <td>38.0℃ - 38.9℃</td>
+                                <td>≥ 39.0℃</td>
+                            </tr>
+                            <tr>
+                                <td><strong>直肠/耳温</strong></td>
+                                <td>36.5℃ - 37.7℃</td>
+                                <td>37.8℃ - 38.4℃</td>
+                                <td>38.5℃ - 39.0℃</td>
+                                <td>≥ 39.1℃</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warning Banner -->
+        <div class="container">
+            <div class="warning-banner">
+                <strong>重要提示：</strong> 体温计测量结果受多种因素影响（如测量时间、运动、情绪）。如果体温超过38.5℃且伴有明显不适，请及时咨询医生。
+            </div>
+        </div>
+
+        <!-- Treatment & Care -->
+        <section id="treatment" class="container">
+            <h2 class="section-title">家庭护理与应对步骤</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>测量体温</h3>
+                        <p>使用电子体温计准确测量腋温、口温或耳温。测量前应保持安静至少15分钟，避免运动、进食或饮用热饮。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>补充水分</h3>
+                        <p>发烧会加速体内水分流失，极易导致脱水。请少量多次饮用温开水、淡盐水或电解质饮料，以维持体液平衡。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>合理用药</h3>
+                        <p>对于体温≥38.5℃或明显不适的成年人，可使用布洛芬或对乙酰氨基酚。儿童需严格遵照体重计算剂量，避免使用阿司匹林。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>物理降温与环境</h3>
+                        <p>保持室内通风，室温控制在24-26℃。穿着透气棉质衣物，避免过度捂汗（“捂汗”可能引发惊厥）。温水擦拭或冰袋冷敷额头可作为辅助手段。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- When to See a Doctor -->
+        <section id="when-to-see" class="container" style="margin-bottom: 60px;">
+            <h2 class="section-title">何时需要立即就医</h2>
+            <div class="info-card">
+                <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                    <li>🚨 3个月以下的婴儿发烧（任何温度）</li>
+                    <li>🚨 3-6个月婴儿体温超过38℃</li>
+                    <li>🚨 6个月以上儿童体温持续超过3天不退</li>
+                    <li>🚨 服用退烧药后体温不下降或反复升高</li>
+                    <li>🚨 出现呼吸困难、皮疹或剧烈呕吐</li>
+                    <li>🚨 意识不清、颈部僵硬或剧烈头痛</li>
+                    <li>🚨 老年人或慢性病患者体温升高</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于发烧指南</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">
+                        本站旨在提供科学、准确的医疗健康信息，帮助大众正确认识发热症状，进行初步的家庭护理。本内容不能替代专业医生的诊断和治疗建议。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#symptoms">症状识别</a></li>
+                        <li><a href="#standards">体温标准</a></li>
+                        <li><a href="#treatment">护理指南</a></li>
+                        <li><a href="#when-to-see">紧急就医</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>免责声明</h4>
+                    <ul>
+                        <li><a href="#">使用条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">医疗免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 发烧健康指南. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interaction scripts for better UX
+        function checkTemperature() {
+            // Using a simple alert replacement logic (in a real app, this would be a modal)
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '50%';
+            modal.style.left = '50%';
+            modal.style.transform = 'translate(-50%, -50%)';
+            modal.style.background = 'white';
+            modal.style.padding = '30px';
+            modal.style.borderRadius = '10px';
+            modal.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
+            modal.style.zIndex = '2000';
+            modal.style.maxWidth = '90%';
+            modal.style.textAlign = 'center';
+            
+            modal.innerHTML = `
+                <h3 style="margin-bottom: 15px; color: var(--primary-color);">🌡️ 体温参考</h3>
+                <p style="margin-bottom: 10px;"><strong>腋下：</strong> 36.0-37.0℃ 为正常</p>
+                <p style="margin-bottom: 10px;"><strong>低烧：</strong> 37.1-37.9℃</p>
+                <p style="margin-bottom: 10px;"><strong>中度发烧：</strong> 38.0-38.9℃</p>
+                <p style="margin-bottom: 20px;"><strong>高烧：</strong> ≥ 39.0℃</p>
+                <button onclick="this.parentElement.remove()" style="background:var(--primary-color); color:white; border:none; padding:8px 20px; border-radius:5px; cursor:pointer;">关闭</button>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function showMedicationTips() {
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '50%';
+            modal.style.left = '50%';
+            modal.style.transform = 'translate(-50%, -50%)';
+            modal.style.background = 'white';
+            modal.style.padding = '30px';
+            modal.style.borderRadius = '10px';
+            modal.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
+            modal.style.zIndex = '2000';
+            modal.style.maxWidth = '90%';
+            modal.style.textAlign = 'left';
+            
+            modal.innerHTML = `
+                <h3 style="margin-bottom: 15px; color: var(--primary-color);">💊 用药建议</h3>
+                <ul style="margin-bottom: 20px; padding-left: 20px;">
+                    <li><strong>成人：</strong> 布洛芬或对乙酰氨基酚，间隔4-6小时一次。</li>
+                    <li><strong>儿童：</strong> 严格按体重计算剂量，切勿使用成人药。</li>
+                    <li><strong>注意：</strong> 两种退烧药不宜交替使用，除非医生建议。</li>
+                </ul>
+                <button onclick="this.parentElement.remove()" style="background:var(--primary-color); color:white; border:none; padding:8px 20px; border-radius:5px; cursor:pointer;">关闭</button>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function showCareTips() {
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '50%';
+            modal.style.left = '50%';
+            modal.style.transform = 'translate(-50%, -50%)';
+            modal.style.background = 'white';
+            modal.style.padding = '30px';
+            modal.style.borderRadius = '10px';
+            modal.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
+            modal.style.zIndex = '2000';
+            modal.style.maxWidth = '90%';
+            modal.style.textAlign = 'left';
+            
+            modal.innerHTML = `
+                <h3 style="margin-bottom: 15px; color: var(--primary-color);">🛌 居家护理</h3>
+                <ul style="margin-bottom: 20px; padding-left: 20px;">
+                    <li><strong>多喝水：</strong> 防止脱水。</li>
+                    <li><strong>少穿衣：</strong> 适当散热，不要捂汗。</li>
+                    <li><strong>休息：</strong> 保证充足睡眠有助于恢复。</li>
+                    <li><strong>清淡饮食：</strong> 易消化的流食或半流食。</li>
+                </ul>
+                <button onclick="this.parentElement.remove()" style="background:var(--primary-color); color:white; border:none; padding:8px 20px; border-radius:5px; cursor:pointer;">关闭</button>
+            `;
+            document.body.appendChild(modal);
+        }
+    </script>
+</body>
+</html>

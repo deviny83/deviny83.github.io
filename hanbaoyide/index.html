@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩宝仪的经典歌曲-华语经典金曲与怀旧音乐合集</title>
+    <meta name="description" content="韩宝仪经典歌曲大全，收录《粉红色的回忆》《晚安曲》《玻璃杯》等怀旧金曲。提供歌曲试听、歌词赏析及经典老歌背景介绍，重温90年代华语流行乐坛的温柔旋律。">
+    <meta name="keywords" content="韩宝仪的经典歌曲,韩宝仪,粉红色的回忆,晚安曲,经典老歌,怀旧音乐,华语流行">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d65a6a;
+            --secondary-color: #f8f0f0;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffe6e9 0%, #fff0f2 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Main Content */
+        main {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        /* Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        /* Song Card */
+        .song-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .song-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-cover {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .song-card:hover .card-cover img {
+            transform: scale(1.05);
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(214, 90, 106, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .song-card:hover .play-icon {
+            opacity: 1;
+        }
+
+        .play-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+            margin-left: 3px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .song-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .song-meta {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag {
+            background-color: #ffe6e9;
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Featured Section */
+        .featured-section {
+            background-color: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .featured-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .featured-img img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .featured-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .featured-text p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b94a5b;
+        }
+
+        /* List Style Section */
+        .list-section {
+            margin-bottom: 60px;
+        }
+
+        .list-item {
+            background: var(--bg-white);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .song-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .song-info p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .play-btn {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .play-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 50px 20px 20px;
+            margin-top: auto;
+        }
+
+        .footer-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .featured-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .list-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .play-btn {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--primary-color)">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+                <span>韩宝仪经典歌曲</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">全部歌曲</a></li>
+                    <li><a href="#">热门榜单</a></li>
+                    <li><a href="#">经典专辑</a></li>
+                    <li><a href="#">怀旧专区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>重温90年代的温柔旋律</h1>
+            <p>韩宝仪以其甜美清澈的嗓音和独特的演唱风格，成为了华语乐坛“甜蜜歌后”。本站为您整理了韩宝仪的经典歌曲合集，带您回到那个纯真美好的年代。</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>经典收录</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000万+</h3>
+                    <p>累计播放</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3</h3>
+                    <p>黄金年代</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="section-title">
+            <h2>韩宝仪代表作品</h2>
+            <p>精选最具人气的经典曲目，不容错过的怀旧金曲</p>
+        </section>
+
+        <div class="grid-container">
+            <!-- Song Card 1 -->
+            <article class="song-card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/hby1/400/300" alt="粉红色的回忆">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="song-title">粉红色的回忆</h3>
+                    <div class="song-meta">
+                        <span>专辑：<span class="tag">经典</span></span>
+                        <span>发行：1991</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Song Card 2 -->
+            <article class="song-card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/hby2/400/300" alt="晚安曲">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="song-title">晚安曲</h3>
+                    <div class="song-meta">
+                        <span>专辑：<span class="tag">深夜</span></span>
+                        <span>发行：1992</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Song Card 3 -->
+            <article class="song-card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/hby3/400/300" alt="玻璃杯">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="song-title">玻璃杯</h3>
+                    <div class="song-meta">
+                        <span>专辑：<span class="tag">伤感</span></span>
+                        <span>发行：1993</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Song Card 4 -->
+            <article class="song-card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/hby4/400/300" alt="红蔷薇">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="song-title">红蔷薇</h3>
+                    <div class="song-meta">
+                        <span>专辑：<span class="tag">爱情</span></span>
+                        <span>发行：1994</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Song Card 5 -->
+            <article class="song-card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/hby5/400/300" alt="天涯歌女">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="song-title">天涯歌女</h3>
+                    <div class="song-meta">
+                        <span>专辑：<span class="tag">翻唱</span></span>
+                        <span>发行：1995</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Song Card 6 -->
+            <article class="song-card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/hby6/400/300" alt="樱花树下">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="song-title">樱花树下</h3>
+                    <div class="song-meta">
+                        <span>专辑：<span class="tag">抒情</span></span>
+                        <span>发行：1996</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <section class="featured-section">
+            <div class="featured-layout">
+                <div class="featured-img">
+                    <img src="https://picsum.photos/seed/hby_artist/600/400" alt="韩宝仪音乐风格">
+                </div>
+                <div class="featured-text">
+                    <h2>关于韩宝仪的音乐风格</h2>
+                    <p>韩宝仪出生于马来西亚，后定居台湾。她的嗓音清新甜美，音色柔和，擅长演绎抒情歌曲。她的音乐风格融合了华语流行与东南亚民歌的元素，尤其是她演唱的《粉红色的回忆》、《晚安曲》等歌曲，在90年代的中国大陆和东南亚地区广为流传，成为了无数人心中的“甜歌皇后”。</p>
+                    <p>除了流行金曲，韩宝仪还翻唱了许多经典的华语老歌，如《天涯歌女》、《天涯明月刀》等，用她独特的嗓音赋予了这些老歌新的生命力。</p>
+                    <a href="#" class="btn">了解更多背景故事</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="list-section">
+            <div class="section-title">
+                <h2>怀旧金曲列表</h2>
+                <p>更多韩宝仪经典曲目，点击试听</p>
+            </div>
+            
+            <div class="list-item">
+                <div class="song-info">
+                    <h4>往事只能回味</h4>
+                    <p>经典翻唱 | 1992</p>
+                </div>
+                <button class="play-btn">试听</button>
+            </div>
+
+            <div class="list-item">
+                <div class="song-info">
+                    <h4>望春风</h4>
+                    <p>台语经典 | 1993</p>
+                </div>
+                <button class="play-btn">试听</button>
+            </div>
+
+            <div class="list-item">
+                <div class="song-info">
+                    <h4>夕阳醉了</h4>
+                    <p>深情演绎 | 1994</p>
+                </div>
+                <button class="play-btn">试听</button>
+            </div>
+
+            <div class="list-item">
+                <div class="song-info">
+                    <h4>月亮代表我的心</h4>
+                    <p>永恒经典 | 1995</p>
+                </div>
+                <button class="play-btn">试听</button>
+            </div>
+        </section>
+
+        <section class="section-title">
+            <h2>常见问题</h2>
+        </section>
+
+        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: var(--shadow);">
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-dark);">韩宝仪最著名的歌曲有哪些？</summary>
+                <p style="margin-top: 10px; color: var(--text-gray);">韩宝仪最著名的歌曲包括《粉红色的回忆》、《晚安曲》、《玻璃杯》、《红蔷薇》以及翻唱的《天涯歌女》和《往事只能回味》等。这些歌曲在90年代曾风靡一时。</p>
+            </details>
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-dark);">韩宝仪是哪里人？</summary>
+                <p style="margin-top: 10px; color: var(--text-gray);">韩宝仪出生于马来西亚柔佛州，后来移居台湾发展音乐事业。</p>
+            </details>
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-dark);">韩宝仪的音乐风格是怎样的？</summary>
+                <p style="margin-top: 10px; color: var(--text-gray);">她的音乐风格以甜美、清新、柔和著称，擅长演唱抒情流行歌曲，同时也翻唱了许多经典的华语老歌。</p>
+            </details>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>韩宝仪经典歌曲</h4>
+                <p style="font-size: 0.9rem; color: #999;">致力于收录和整理韩宝仪的经典作品，为歌迷提供一个怀旧、纯净的听歌平台。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">全部歌曲</a></li>
+                    <li><a href="#">经典专辑</a></li>
+                    <li><a href="#">怀旧专区</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>友情链接</h4>
+                <ul>
+                    <li><a href="#">华语音乐网</a></li>
+                    <li><a href="#">经典老歌大全</a></li>
+                    <li><a href="#">怀旧影视网</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 韩宝仪经典歌曲收藏站. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

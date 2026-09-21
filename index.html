@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="b站直播姬 - B站官方直播推流软件下载指南与使用教程。提供直播推流、设备调试、画质优化及常见问题解决方案，助您轻松开启高质量直播。">
+    <meta name="keywords" content="b站直播姬,直播推流软件,直播姬下载,直播姬教程,直播设备">
+    <title>b站直播姬 - 官方直播推流工具下载与使用指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #FB7299;
+            --secondary-color: #00AEEC;
+            --dark-bg: #1F1F1F;
+            --card-bg: #2B2B2B;
+            --text-main: #FFFFFF;
+            --text-sub: #A0A0A0;
+            --border-color: #444444;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: rgba(31, 31, 31, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: var(--text-sub);
+            font-size: 15px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-main);
+        }
+
+        .btn-download-nav {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .btn-download-nav:hover {
+            background-color: #e65c80;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            padding: 80px 0 60px;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(251,114,153,0.1) 0%, rgba(31,31,31,0) 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(251, 114, 153, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #e65c80;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-sub);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .hero-image {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            background-color: #000;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.9;
+        }
+
+        /* 主要内容区 */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--text-sub);
+        }
+
+        /* 功能特性 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--secondary-color);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(0, 174, 236, 0.1);
+            color: var(--secondary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 15px;
+        }
+
+        /* 安装指南 */
+        .install-guide {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 80px;
+        }
+
+        .step-list {
+            counter-reset: step;
+            display: grid;
+            gap: 30px;
+        }
+
+        .step-item {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            gap: 20px;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--border-color);
+            color: var(--text-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .step-item:nth-child(1) .step-number { background-color: var(--primary-color); }
+        .step-item:nth-child(2) .step-number { background-color: #00AEEC; }
+        .step-item:nth-child(3) .step-number { background-color: #78be20; }
+
+        .step-content h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: var(--text-sub);
+            font-size: 15px;
+        }
+
+        .code-block {
+            background-color: #1a1a1a;
+            padding: 16px;
+            border-radius: 6px;
+            font-family: monospace;
+            color: #a5d6ff;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            margin-bottom: 80px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 16px;
+            color: var(--text-sub);
+            font-size: 15px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+            margin-right: 8px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #151515;
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--text-main);
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span>B站直播姬</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#features" class="active">功能特性</a>
+                <a href="#guide">安装指南</a>
+                <a href="#faq">常见问题</a>
+                <a href="#help">帮助中心</a>
+            </nav>
+            <a href="https://live.bilibili.com/" target="_blank" class="btn-download-nav">前往直播</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>让直播更简单 <br><span class="highlight">b站直播姬</span></h1>
+                <p>B站官方推荐直播推流软件，专为直播爱好者设计。一键配置OBS推流参数，实时预览画面，轻松开启高清直播。</p>
+                <div class="hero-actions">
+                    <a href="https://live.bilibili.com/" target="_blank" class="btn btn-primary">立即开始直播</a>
+                    <a href="#guide" class="btn btn-secondary">查看教程</a>
+                </div>
+                <div class="hero-image">
+                    <!-- 使用 picsum 作为占位图，模拟软件界面 -->
+                    <img src="https://picsum.photos/seed/bili-live-hime/1000/500.jpg" alt="b站直播姬软件界面预览">
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content" id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>核心功能</h2>
+                    <p>专为B站直播优化的专业工具，助您提升直播质量</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+                        </div>
+                        <h3>一键配置</h3>
+                        <p>内置B站直播流地址与鉴权Key，无需手动输入复杂参数，自动适配网络环境。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>实时预览</h3>
+                        <p>支持本地摄像头与屏幕画面的实时采集与预览，确保直播画面稳定清晰。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h3>多场景切换</h3>
+                        <p>支持虚拟摄像头，方便您在直播时切换游戏画面、摄像头、PPT演示等多种场景。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content" id="guide">
+            <div class="container">
+                <div class="section-title">
+                    <h2>安装与设置指南</h2>
+                    <p>快速上手，几分钟内完成直播推流设置</p>
+                </div>
+                <div class="install-guide">
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>下载与安装</h4>
+                                <p>访问B站直播中心，找到<b>b站直播姬</b>下载页面，选择对应系统（Windows/Mac）版本进行安装。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>登录账号</h4>
+                                <p>打开软件，使用您的B站账号进行登录。系统会自动获取您的直播流地址。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>添加画面源</h4>
+                                <p>在“来源”列表中添加“窗口采集”（用于游戏或桌面）或“视频采集设备”（用于摄像头）。</p>
+                                <div class="code-block">推荐设置：1080P分辨率 / 30FPS 或 60FPS</div>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>开始推流</h4>
+                                <p>检查“预览”画面无误后，点击右上角的“开始直播”按钮，即可进入直播状态。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content" id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题</h2>
+                    <p>解决直播过程中遇到的疑难杂症</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">b站直播姬无法连接服务器怎么办？</div>
+                        <div class="faq-answer">请检查您的网络连接是否稳定，尝试重启软件或更换网络环境。如果防火墙拦截，请允许b站直播姬通过网络。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">直播卡顿、画面延迟高如何优化？</div>
+                        <div class="faq-answer">建议降低视频码率或分辨率，关闭后台不必要的程序。确保您的电脑配置满足直播要求，并使用有线网络连接。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何调整直播推流码率？</div>
+                        <div class="faq-answer">在b站直播姬的设置中，找到“输出”选项卡，根据您的网络带宽调整码率。通常上行速度在5Mbps以上可流畅推流1080P。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">直播姬支持手机直播吗？</div>
+                        <div class="faq-answer">b站直播姬主要面向PC端推流。手机直播请使用B站官方APP内的“手机直播”功能。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>b站直播姬</h3>
+                    <p>B站官方直播推流工具，致力于为创作者提供稳定、高效的直播体验。让每一个精彩瞬间都能实时传递。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品</h4>
+                    <ul>
+                        <li><a href="#">软件下载</a></li>
+                        <li><a href="#">更新日志</a></li>
+                        <li><a href="#">硬件推荐</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">技术论坛</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="#">使用协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Bilibili. All rights reserved. 本页面为非官方技术指导演示页面。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
